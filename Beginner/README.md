@@ -1,9 +1,9 @@
 # SQL-Cheat-Sheet *Basics*
 
 ## Managing Users
-    GRANT privileges ON table TO user (public) [WITH GRANT OPTION ]
+    GRANT privileges ON table TO user (PUBLIC) [WITH GRANT OPTION ]
     REVOKE privileges ON table FROM user
-- privileges: 
+- Privileges: 
   - ALL Privileges
     - UPDATE (columns)
     - SELECT (columns)
@@ -12,9 +12,9 @@
     - ALTER (columns)
     - INDEX
 ###  ROLES : 
-    CREATE ROLE role_name;
-    GRANT prv ON table TO role;
-    GRANT role 
+    - CREATE ROLE role_name;
+    - GRANT prv ON table TO role;
+    - GRANT role TO user;
 
 ## Managing Database 
 
@@ -23,12 +23,10 @@
 ### Creation 
   - CREATE TABLE table_name ( 
                   
-                  column_name  [TYPE] [COLUMN_CONSTRAINT]  ,
-                  [TABLE_CONSTRAINT],
-                  
-                 
-                            
-      );
+      column_name  [TYPE] [COLUMN_CONSTRAINT]  ,
+      [TABLE_CONSTRAINT]
+
+                            );
       
       - **COLUMN CONSTRAINT**: [CONSTRAINT constraint_name]
          -  AUTO_INCREMENT
@@ -58,11 +56,13 @@
        
                   
 ### Modification
+
     ALTER TABLE table_name [OPERATION];
-- **OPERATIONS** :    
-   - 
-      - *RENAME TO* new_table_name
-      - *RENAME COLUMN* column_name TO new_name
+
+  - Alter table  
+    - OPERATIONS :
+      - RENAME TO new_table_name
+      - RENAME COLUMN column_name TO new_name
       - DROP COLUMN column_name
       - DROP CONSTRAINT const_name
       - ADD COLUMN column_name
