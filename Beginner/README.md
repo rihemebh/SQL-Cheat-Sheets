@@ -77,7 +77,10 @@
 - ``  
  SELECT columns
  FROM tables 
- WHERE conditions;
+ WHERE conditions
+ GROUP BY columns 
+ HAVING conditions
+ ORDER BY columns 
    ``
 ### UPDATE
 - ``
