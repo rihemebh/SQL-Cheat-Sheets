@@ -1,22 +1,26 @@
 # SQL-Cheat-Sheet *Basics*
 
 ## Managing Users
-    GRANT privileges ON table TO user (PUBLIC) [WITH GRANT OPTION ]
-    REVOKE privileges ON table FROM user
+  - ``GRANT privileges ON table TO user (PUBLIC) [WITH GRANT OPTION ]``
+  - ``REVOKE privileges ON table FROM user``
 - Privileges: 
-  - ALL Privileges
-    - UPDATE (columns)
-    - SELECT (columns)
-    - INSERT (columns)
-    - DELETE (columns)
-    - ALTER (columns)
-    - INDEX
+    - `` ALL PREVILEGES``
+    - ``UPDATE (columns)``
+    - ``SELECT (columns)``
+    - ``INSERT (columns)``
+    - ``DELETE (columns)``
+    - ``ALTER (columns)``
+    - `` INDEX``
 ###  ROLES : 
-    - CREATE ROLE role_name;
-    - GRANT prv ON table TO role;
-    - GRANT role TO user;
-
-## Managing Database 
+- ``
+    CREATE ROLE role_name; 
+``
+- `` 
+   GRANT previlege ON table TO role; 
+``
+- ``  
+ GRANT role TO user; 
+``
 
 ## Managing Tables
 
@@ -26,9 +30,10 @@
       column_name  [TYPE] [COLUMN_CONSTRAINT]  ,
       [TABLE_CONSTRAINT]
 
-                            );
+      );
       
-      - **COLUMN CONSTRAINT**: [CONSTRAINT constraint_name]
+      - **COLUMN CONSTRAINT**: 
+      [CONSTRAINT constraint_name]
          -  AUTO_INCREMENT
          -  UNIQUE
          -  NULL / NOT NULL 
@@ -56,22 +61,25 @@
        
                   
 ### Modification
+- ``ALTER TABLE table_name [OPERATION];``
 
-    ALTER TABLE table_name [OPERATION];
-
-  - Alter table  
+ 
     - OPERATIONS :
-      - RENAME TO new_table_name
-      - RENAME COLUMN column_name TO new_name
-      - DROP COLUMN column_name
-      - DROP CONSTRAINT const_name
-      - ADD COLUMN column_name
-      - ADD CONSTRAINT constraint_details
-      - MODIFY COLUMN column_name
+      - `` RENAME TO`` new_table_name
+      - ``RENAME COLUMN`` column_name TO new_name
+      - ``DROP COLUMN`` column_name
+      - ``DROP CONSTRAINT`` const_name
+      - ``ADD COLUMN`` column_name
+      - ``ADD CONSTRAINT`` constraint_details
+      - ``MODIFY COLUMN`` column_name
       
 
 ### Delete 
     DROP TABLE Table_name {CASCADE CONSTRAINT | RESTRICT };
 ## Managing Data
+### SELECT 
+### UPDATE
+### INSERT
+### DELETE
 
 ###
