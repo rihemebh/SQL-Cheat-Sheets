@@ -25,37 +25,33 @@
 ## Managing Tables
 
 ### Creation 
-  - CREATE TABLE table_name ( 
-                  
-      column_name  [TYPE] [COLUMN_CONSTRAINT]  ,
-      [TABLE_CONSTRAINT]
-
-      );
-      
+  - ``CREATE TABLE table_name ( column_name  [TYPE] [COLUMN_CONSTRAINT]  , [TABLE_CONSTRAINT] );``
+     
+ 
       - **COLUMN CONSTRAINT**: 
       [CONSTRAINT constraint_name]
-         -  AUTO_INCREMENT
-         -  UNIQUE
-         -  NULL / NOT NULL 
-         -  DEFAULT 'val'
-         -  PRIMARY KEY
-         -  REFRENCES 'table_name'
-         -  CHECK 'constraint'
+         -  `` AUTO_INCREMENT ``
+         -  ``UNIQUE``
+         -  ``NULL`` / ``NOT NULL`` 
+         -  ``DEFAULT``'val'
+         -  ``PRIMARY KEY``
+         -  ``REFRENCES`` 'table_name'
+         -  ``CHECK`` 'constraint'
         
       - **TABLE CONSTRAINT** :
-        - CONSTRAINT const_name CONST_TYPE (Column1, column2,... )
-        - FOREIGN KEY(column_name) REFERENCES table_name [FOREIGN KEY CONSTRAINT]
+        - ``CONSTRAINT`` const_name ``CONST_TYPE`` (Column1, column2,... )
+        - ``FOREIGN KEY``(column_name) ``REFERENCES`` table_name(primarykey) [FOREIGN KEY CONSTRAINT]
         
       - **FOREIGN KEY CONSTRAINT**: 
-        - ON DELETE {CASCADE/SET NULL/ SET DEFAULT}
-        - ON UPDATE {CASCADE/SET NULL/ SET DEFAULT}   
+        - ``ON DELETE`` {CASCADE/SET NULL/ SET DEFAULT}
+        - ``ON UPDATE`` {CASCADE/SET NULL/ SET DEFAULT}   
               
       - **TYPE**: 
-        - VARCHAR(n)
-        - INTEGER 
-        - BOOL 
-        - DATE
-        - DATETIME
+        - ``VARCHAR(n)``
+        - ``INTEGER`` 
+        - ``BOOL``
+        - ``DATE``
+        - ``DATETIME``
      
   ##### FIND MORE: `https://www.w3schools.com/sql/sql_datatypes.asp`
        
@@ -75,11 +71,23 @@
       
 
 ### Delete 
-    DROP TABLE Table_name {CASCADE CONSTRAINT | RESTRICT };
+  - ``DROP TABLE Table_name {CASCADE CONSTRAINT | RESTRICT };``
 ## Managing Data
 ### SELECT 
+- ``  
+ SELECT columns
+ FROM tables 
+ WHERE conditions;
+   ``
 ### UPDATE
+- ``
+  UPDATE table 
+  SET changes
+  WHERE condition
+  ``
 ### INSERT
-### DELETE
 
-###
+- ``INSET INTO table_name VALUES (val1, val2 ,...);``
+
+### DELETE
+- ``DELETE FROM table_name WHERE condition``
