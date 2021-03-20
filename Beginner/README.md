@@ -1,6 +1,5 @@
-# SQL-Cheat-Sheet *Basics*
 
-## Managing Users
+# Managing Users
   - ``GRANT privileges ON table TO user (PUBLIC) [WITH GRANT OPTION ]``
   - ``REVOKE privileges ON table FROM user``
 - Privileges: 
@@ -22,9 +21,9 @@
  GRANT role TO user; 
 ``
 
-## Managing Tables
+# Managing Tables
 
-### Creation 
+## Creation 
   - ``CREATE TABLE table_name ( column_name  [TYPE] [COLUMN_CONSTRAINT]  , [TABLE CONSTRAINT] [REFRENTIAL CONSTAINT]);``
      
        - **TABLE CONSTRAINT** :
@@ -56,7 +55,7 @@
   ##### FIND MORE: `https://www.w3schools.com/sql/sql_datatypes.asp`
        
                   
-### Modification
+## Modification
 - ``ALTER TABLE table_name [OPERATION];``
 
  
@@ -70,10 +69,10 @@
       - ``MODIFY COLUMN`` column_name
       
 
-### Delete 
+## Delete 
   - ``DROP TABLE Table_name {CASCADE CONSTRAINT | RESTRICT };``
-## Managing Data
-### SELECT 
+# Managing Data
+## SELECT 
 - ``  
  SELECT columns
  FROM tables 
@@ -88,9 +87,9 @@
   SET changes
   WHERE condition
   ``
-### INSERT
+## INSERT
 
 - ``INSET INTO table_name VALUES (val1, val2 ,...);``
 
-### DELETE
+## DELETE
 - ``DELETE FROM table_name WHERE condition``
