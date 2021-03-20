@@ -40,10 +40,9 @@
     
       - **REFERENCIAL CONSTRAINT** :
         - ``FOREIGN KEY``(column_name) ``REFERENCES`` table_name(primarykey) [FOREIGN KEY CONSTRAINT]
-        
-      - **FOREIGN KEY CONSTRAINT**: 
-        - ``ON DELETE`` {CASCADE/SET NULL/ SET DEFAULT}
-        - ``ON UPDATE`` {CASCADE/SET NULL/ SET DEFAULT}   
+        - **FOREIGN KEY CONSTRAINT**: 
+           - ``ON DELETE`` {CASCADE/SET NULL/ SET DEFAULT}
+           - ``ON UPDATE`` {CASCADE/SET NULL/ SET DEFAULT}   
               
       - **TYPE**: 
         - ``VARCHAR(n)``
