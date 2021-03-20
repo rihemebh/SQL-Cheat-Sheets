@@ -25,21 +25,21 @@
 ## Managing Tables
 
 ### Creation 
-  - ``CREATE TABLE table_name ( column_name  [TYPE] [COLUMN_CONSTRAINT]  , [TABLE_CONSTRAINT] );``
+  - ``CREATE TABLE table_name ( column_name  [TYPE] [COLUMN_CONSTRAINT]  , [TABLE CONSTRAINT] [REFRENTIAL CONSTAINT]);``
      
- 
+       - **TABLE CONSTRAINT** :
+         - ``CONSTRAINT`` const_name ``CONST_TYPE`` (Column1, column2,... )
       - **COLUMN CONSTRAINT**: 
       [CONSTRAINT constraint_name]
-         -  `` AUTO_INCREMENT ``
+          -  `` AUTO_INCREMENT ``
          -  ``UNIQUE``
          -  ``NULL`` / ``NOT NULL`` 
          -  ``DEFAULT``'val'
          -  ``PRIMARY KEY``
          -  ``REFRENCES`` 'table_name'
          -  ``CHECK`` 'constraint'
-        
-      - **TABLE CONSTRAINT** :
-        - ``CONSTRAINT`` const_name ``CONST_TYPE`` (Column1, column2,... )
+    
+      - **REFERENCIAL CONSTRAINT** :
         - ``FOREIGN KEY``(column_name) ``REFERENCES`` table_name(primarykey) [FOREIGN KEY CONSTRAINT]
         
       - **FOREIGN KEY CONSTRAINT**: 
@@ -62,7 +62,7 @@
  
     - OPERATIONS :
       - `` RENAME TO`` new_table_name
-      - ``RENAME COLUMN`` column_name TO new_name
+      - ``RENAME COLUMN`` column_name ``TO`` new_name
       - ``DROP COLUMN`` column_name
       - ``DROP CONSTRAINT`` const_name
       - ``ADD COLUMN`` column_name
