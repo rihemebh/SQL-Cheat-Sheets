@@ -73,22 +73,38 @@
 # Managing Data
 ## SELECT 
  
-     SELECT columns
+     SELECT {DISTINCT | ALL} columns
      FROM tables 
      WHERE conditions
      GROUP BY columns 
      HAVING conditions
      ORDER BY columns 
      
- - Operations and Conditions
+ - **Operations and Conditions**
+ 
     - < , > , = <= , >= 
     - LIKE
     - IS NULL
     - IN (va1, val)
     - BETWEEN n1 AND n2
-    - 
     
-  
+- **Functions**
+
+   - SUM
+   - AVG
+   - MIN
+   - MAX
+   - COUNT
+   
+ - **Single-Row functions** can be used in ``SELECT`` statement, ``WHERE`` and ``ORDER BY`` clause
+ 
+   - UPPER, LOWER , INITCAP
+   - CONCAT, LENGTH, SUBSTR, INSTR, LPAD, RPAD, TRIM , REPLACE.
+   - MONTHS_BETWEEN, ADD_MONTHS, NEXT_DAY, LAST_DAY, CURTIME , DATE_FORMAT(date, format) ,YEAR(date)
+   - ROUND, TRUNC, MOD.
+   
+  See More : https://docs.oracle.com/database/121/SQLRF/functions002.htm#SQLRF51178
+
 ## UPDATE
 - ``
   UPDATE table 
