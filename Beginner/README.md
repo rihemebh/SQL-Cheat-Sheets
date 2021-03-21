@@ -82,7 +82,7 @@
      
  ### Operations can be used in ``WHERE`` and ``HAVING`` clause 
  
-   - < , > , = <= , >= 
+   - < , > , = ,<= , >= , <>
    - LIKE
    - IS NULL
    - IN (va1, val)
