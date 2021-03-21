@@ -86,9 +86,10 @@
     - IS NULL
     - IN (va1, val)
     - BETWEEN n1 AND n2
+    - 
     
   
-### UPDATE
+## UPDATE
 - ``
   UPDATE table 
   SET changes
