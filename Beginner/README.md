@@ -80,13 +80,13 @@
      HAVING conditions
      ORDER BY columns 
      
- - **Operations and Conditions**
+ ### Operations can be used in ``WHERE`` and ``HAVING`` clause 
  
-    - < , > , = <= , >= 
-    - LIKE
-    - IS NULL
-    - IN (va1, val)
-    - BETWEEN n1 AND n2
+   - < , > , = <= , >= 
+   - LIKE
+   - IS NULL
+   - IN (va1, val)
+   - BETWEEN n1 AND n2
 
 ### Functions can be used in ``SELECT`` statement, ``WHERE`` and ``ORDER BY`` clause
     
