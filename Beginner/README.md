@@ -115,7 +115,7 @@
   ``
 ## INSERT
 
-- ``INSET INTO table_name VALUES (val1, val2 ,...);``
+- ``INSET INTO table_name (col1, col2, ...) VALUES (val1, val2 ,...);``
 
 ## DELETE
 - ``DELETE FROM table_name WHERE condition``
