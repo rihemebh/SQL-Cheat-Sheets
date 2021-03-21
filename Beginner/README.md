@@ -87,8 +87,10 @@
     - IS NULL
     - IN (va1, val)
     - BETWEEN n1 AND n2
+
+### Functions can be used in ``SELECT`` statement, ``WHERE`` and ``ORDER BY`` clause
     
-- **Functions**
+1 - **Multiple-Row Functions** : Aggregate Functions
 
    - SUM
    - AVG
@@ -96,7 +98,7 @@
    - MAX
    - COUNT
    
- - **Single-Row functions** can be used in ``SELECT`` statement, ``WHERE`` and ``ORDER BY`` clause
+2  - **Single-Row functions** 
  
    - UPPER, LOWER , INITCAP
    - CONCAT, LENGTH, SUBSTR, INSTR, LPAD, RPAD, TRIM , REPLACE.
