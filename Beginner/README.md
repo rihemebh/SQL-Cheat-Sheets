@@ -72,14 +72,22 @@
   - ``DROP TABLE Table_name {CASCADE CONSTRAINT | RESTRICT };``
 # Managing Data
 ## SELECT 
-- ``  
- SELECT columns
- FROM tables 
- WHERE conditions
- GROUP BY columns 
- HAVING conditions
- ORDER BY columns 
-   ``
+ 
+     SELECT columns
+     FROM tables 
+     WHERE conditions
+     GROUP BY columns 
+     HAVING conditions
+     ORDER BY columns 
+     
+ - Operations and Conditions
+    - < , > , = <= , >= 
+    - LIKE
+    - IS NULL
+    - IN (va1, val)
+    - BETWEEN n1 AND n2
+    
+  
 ### UPDATE
 - ``
   UPDATE table 
