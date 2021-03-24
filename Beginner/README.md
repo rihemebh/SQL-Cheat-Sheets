@@ -78,6 +78,7 @@
      WHERE conditions
      GROUP BY columns 
      HAVING conditions
+     [UNION | INTERSECT | MINUS <sub-Query>]
      ORDER BY columns 
      
  ### Operations can be used in ``WHERE`` and ``HAVING`` clause 
