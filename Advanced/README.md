@@ -43,4 +43,6 @@
  
 ### Delete
 - `` DROP VIEW view_name ``
+# Recursive Queries (^SQL3)
+
 
