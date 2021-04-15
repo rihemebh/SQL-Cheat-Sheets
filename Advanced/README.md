@@ -81,8 +81,7 @@
        RETURN statement
        
        EXCEPTION
-       WHEN excp
-       THEN RETURN NULL;
+     
        END func_name;
        
   ## Procedures
@@ -93,8 +92,7 @@
        BEGIN
          
        EXCEPTION
-       WHEN excp
-       THEN RETURN NULL;
+   
        END proc_name;
 
 # Triggers
