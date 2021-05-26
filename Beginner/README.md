@@ -3,13 +3,12 @@
   - ``GRANT privileges ON table TO user (PUBLIC) [WITH GRANT OPTION ]``
   - ``REVOKE privileges ON table FROM user``
 - Privileges: 
-    - `` ALL PREVILEGES``
-    - ``UPDATE (columns)``
-    - ``SELECT (columns)``
-    - ``INSERT (columns)``
-    - ``DELETE (columns)``
-    - ``ALTER (columns)``
-    - `` INDEX``
+
+
+|`` ALL PREVILEGES``|``UPDATE (columns)``|``SELECT (columns)``|``INSERT (columns)``|``DELETE (columns)``|``ALTER (columns)``| `` INDEX``|
+| --- | --- | --- | --- | --- | --- | --- |
+
+
 ###  ROLES : 
 - ``
     CREATE ROLE role_name; 
