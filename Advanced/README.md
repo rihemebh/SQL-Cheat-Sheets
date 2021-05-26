@@ -109,13 +109,28 @@
        [REFERENCING {OLD | NEW | PARENT } [ROW] [AS] alias]
        [FOR EACH ROW]
           
-        --trigger_body (pl/sql bloc) or calling a function or procedure ;
+        --trigger_body (pl/sql bloc) 
+        or
+        --calling a function or procedure (EXECUTE PROCEDURE proc_name();) ;
 
 # Cursor
  - It helps you store multiple lines and Mange access to them
 
-        CURSOR cursorname IS SELECT ..FROM .. WHERE..
-        FOR UPDATE|DELETE [OF listeColonnes ]][NOWAIT WAIT durée]
+### Creation
+
+
+|Oracle |PostgreSQL|
+| ----- | ----- |
+|``CURSOR cursorname IS SELECT ..FROM .. WHERE..``<br />``FOR UPDATE/DELETE [OF Column list ]][NOWAIT WAIT duration]``|``cursorname CURSOR  FOR Query``|
+
+### Iterating Rows
+
+
+|Oracle |PostgreSQL|
+| ----- | ----- |
+|``FOR record_variable IN cursor_variable`` <br/>``LOOP``<br/>``...``<br/> ``END LOOP;``|``LOOP``<br/>``FETCH FROM cursor_variable INTO record_variable;``<br/>``EXIT WHEN NOT FOUND;``<br/>``...``<br />``END LOOP;``|
+
+In PostgreSQL : we should open the Cursor after Declation 
         
 # Exceptions
 
