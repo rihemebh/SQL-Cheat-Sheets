@@ -58,31 +58,48 @@
 # PL/SQL 
 
  ``DECLARE``<br /> ``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``EXCEPTION``<br />``END`` 
-    
-- Var TYPES
-    - INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
-    - TABLES , LINE ..
-    - %TYPE  %ROWTYPE
-     
+
+ 
 # Functions and Procedures 
 ## Functions 
 |Oracle | PostgreSQL |
 | --- | --- |
 | ``CREATE FUNCTION func_name[(in / out / in out parms)] RETURN returnType AS``<br /> ``DECLARE``<br /> ``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``-- SELECT must always be used with INTO``<br />``RETURN statement``<br />``EXCEPTION``<br />``END``|``CREATE FUNCTION func_name() RETURNS returnType AS $$``<br />``DECLARE``<br />``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``RETURN statement``<br />``EXCEPTION``<br />``END``<br />``$$ LANGUAGE plpgsql;``| 
      
-    
-       
-       
+          
   ## Procedures
-       CREATE procedure proc_name[(in | out | in out parms)] AS 
-       DECLARE
-       VarName [constant] type [:= val];
-       
-       BEGIN
-         
-       EXCEPTION
+  
+  |Oracle | PostgreSQL |
+| --- | --- |
+| ``CREATE procedure proc_name[(in / out / in out parms)] AS ``<br /> ``DECLARE``<br /> ``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``-- SELECT must always be used with INTO``<br />``RETURN statement``<br />``EXCEPTION``<br />``END proc_name;``|``CREATE Procedure prod_name() AS $$``<br />``DECLARE``<br />``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``EXCEPTION``<br />``END``<br />``$$ LANGUAGE plpgsql;``| 
+     
+ 
+
+    
+- Var Types
+    - RECORD, INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
+    - TABLES , LINE ..
+    - %TYPE  %ROWTYPE
+- Return Types:     
+     - INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
+     - setof (type) : return more then one row
    
-       END proc_name;
+   **Example:** 
+   
+            CREATE OR REPLACE function cat() RETURNS setof varchar language plpgsql as $$
+            DECLARE 
+              liste CURSOR for SELECT tablename FROM pg_tables where tableowner='root';
+              tablename RECORD ;
+              BEGIN
+
+              for tablename in liste 
+              loop 
+              return NEXT tablename.tablename ;
+              end loop;
+
+              END 
+               $$;
+
 
 # Triggers
 
