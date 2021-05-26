@@ -56,33 +56,22 @@
 <img height=300 src='https://cdn.sqlservertutorial.net/wp-content/uploads/SQL-Server-Recursive-CTE-execution-flow.png' >
 
 # PL/SQL 
-    DECLARE
-       VarName [constant] type [:= val];
-    BEGIN
 
-    EXCEPTION
-      
-    END
+ ``DECLARE``<br /> ``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``EXCEPTION``<br />``END`` 
     
-- TYPES
+- Var TYPES
     - INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
     - TABLES , LINE ..
     - %TYPE  %ROWTYPE
      
 # Functions and Procedures 
 ## Functions 
-       CREATE FUNCTION func_name[(in | out | in out parms)] RETURN returnType AS 
-       DECLARE
-       VarName [constant] type [:= val];
-       
-       BEGIN
-       -- SELECT must always be used with INTO
-          
-       RETURN statement
-       
-       EXCEPTION
+|Oracle | PostgreSQL |
+| --- | --- |
+| ``CREATE FUNCTION func_name[(in / out / in out parms)] RETURN returnType AS``<br /> ``DECLARE``<br /> ``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``-- SELECT must always be used with INTO``<br />``RETURN statement``<br />``EXCEPTION``<br />``END``|``CREATE FUNCTION func_name() RETURNS returnType AS $$``<br />``DECLARE``<br />``VarName [constant] type [:= val];``<br /> ``BEGIN``<br />``RETURN statement``<br />``EXCEPTION``<br />``END``<br />``$$ LANGUAGE plpgsql;``| 
      
-       END func_name;
+    
+       
        
   ## Procedures
        CREATE procedure proc_name[(in | out | in out parms)] AS 
