@@ -111,7 +111,8 @@
           
         --trigger_body (pl/sql bloc) 
         or
-        --calling a function or procedure (EXECUTE PROCEDURE proc_name();) ;
+        --calling a function (EXECUTE PROCEDURE func_name();) ; 
+        this function should RETURN a TRIGGER
 
 # Cursor
  - It helps you store multiple lines and Mange access to them
@@ -154,12 +155,16 @@ we add exceptions within a PL/SQL bloc :
    
       WHEN OTHERS THEN
       statement;
-      
+
+  
   - Defined exception
       - NO_DATA_FOUND 
       - TOO_MANY_ROWS
       - ..
- - Costum exception 
-      - **Declaration** : exception_name EXCEPTION; 
-      - **Raising an exception** : RAISE  exception_name;
- 
+ - Custom exception in oracle: 
+      - **Declaration** : ``exception_name EXCEPTION; ``
+      - **Raising an exception** : ``RAISE  exception_name;``
+      
+ - Custom exception in PostgreSQL: 
+           ``raise exception '%','Exception text';``
+      
