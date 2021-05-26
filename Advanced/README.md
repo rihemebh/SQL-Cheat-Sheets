@@ -80,6 +80,12 @@
     - RECORD, INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
     - TABLES , LINE ..
     - %TYPE  %ROWTYPE
+### Custom Type : 
+            
+            CREATE TYPE type_name AS (
+            var_name    var_type ,
+              );
+              
 - Return Types:     
      - INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
      - setof (type) : return more then one row
