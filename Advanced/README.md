@@ -42,14 +42,14 @@
 ### Delete
 - `` DROP VIEW view_name ``
 # Recursive Queries (^SQL3)
-
+```SQL
      WITH [RECURSIVE] name AS (
      Initialisation Query 
      UNION ALL
      Recursive Query with terminate condition in where 
      )
      SELECT * from name; -- Displaying result data 
-     
+```     
      
 - PostgreSQL requires the RECURSIVE keyword in recursive definitions but it is optional for other databases.
 
@@ -81,17 +81,17 @@
     - TABLES , LINE ..
     - %TYPE  %ROWTYPE
 ### Custom Type : 
-            
+          ```SQL  
             CREATE TYPE type_name AS (
             var_name    var_type ,
               );
-              
+              ```
 - Return Types:     
      - INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
      - setof (type) : return more then one row
    
    **Example:** 
-   
+```SQL
             CREATE OR REPLACE function cat() RETURNS setof varchar language plpgsql as $$
             DECLARE 
               liste CURSOR for SELECT tablename FROM pg_tables where tableowner='root';
@@ -105,10 +105,10 @@
 
               END 
                $$;
-
+````
 
 # Triggers
-
+```SQL
        CREATE TRIGGER trigger_name
        {BEFORE | AFTER} {INSERT | UPDATE| DELETE } [OF colums]
        ON table_name
@@ -119,7 +119,7 @@
         or
         --calling a function (EXECUTE PROCEDURE func_name();) ; 
         this function should RETURN a TRIGGER
-
+```
 # Cursor
  - It helps you store multiple lines and Mange access to them
 
@@ -142,7 +142,7 @@ In PostgreSQL : we should open the Cursor after Declation
 # Exceptions
 
 we add exceptions within a PL/SQL bloc : 
-
+```
        DECLARE 
        -- Variables, curseurs, exceptions définies par l'utilisateur
        BEGIN *
@@ -161,7 +161,7 @@ we add exceptions within a PL/SQL bloc :
    
       WHEN OTHERS THEN
       statement;
-
+````
   
   - Defined exception
       - NO_DATA_FOUND 
