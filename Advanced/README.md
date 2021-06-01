@@ -81,11 +81,11 @@
     - TABLES , LINE ..
     - %TYPE  %ROWTYPE
 ### Custom Type : 
-          ```SQL  
+   ```SQL  
             CREATE TYPE type_name AS (
             var_name    var_type ,
               );
-              ```
+   ```
 - Return Types:     
      - INTEGER , VARCHAR(n) , CHAR ,DATE , DECIMAL ... 
      - setof (type) : return more then one row
