@@ -142,16 +142,17 @@ In PostgreSQL : we should open the Cursor after Declation
 # Exceptions
 
 we add exceptions within a PL/SQL bloc : 
-```
+```PLpgSQL
+
        DECLARE 
        -- Variables, curseurs, exceptions définies par l'utilisateur
-       BEGIN *
+       BEGIN 
 
        -- Instructions 
 
        EXCEPTION (facultatif)
        -- Actions à effectuer lorsque des erreurs se produisent
-       END; *
+       END; 
   -------------------------------------       
          
       EXCEPTION 
